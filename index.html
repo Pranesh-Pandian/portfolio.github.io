@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <head>
+        <title>Portfolio Website | Parallax Scrolling Website</title>
+    </head>
+    <body>
+       <header id="header" >
+        <a href="#" class="logo">Hola! World</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+       </header>
+       <section>
+        <h2 id="text"><span>It's me</span><br>Keerthana</h2>
+        <a href="#" id="btn">Download Resume</a>
+       </section>
+       <div class="sec">
+        <h2>About me</h2>
+        <p>I am Keerthana Sathyakumar, a freshman at CIT, Chennai pursuing CSE.<br>I am deeply into coding and technology, and I want to explore more and evolve along with tech. And also, I feel that I have to share my knowledge with those children who deserve but are being illiterate.<br>My hobbies are coding, dancing, singing, learn new things in real life. I personally got to gain leadership skills during my school days, which is helping me a lot in college too. Looking forward to learn more and more stuffs and boost my knowledge.<br>Happy coding :)
+        </p>
+       </div>
+
+       <script>
+          let text = document.getElementById('text')
+          let btn = document.getElementById('btn')
+          let header = document.getElementById('header')
+
+          window.addEventListener('scroll', function(){
+            let value =  window.scrollY
+
+            text.style.top = 35 + value * -0.25 + '%';
+            btn.style.marginTop = value * 2.0 + 'px';
+            header.style.top = value * 0.5 + 'px';
+          })
+       </script>
+    </body>
+</html>
