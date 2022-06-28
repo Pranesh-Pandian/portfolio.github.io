@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <head>
         <title>Portfolio Website | Parallax Scrolling Website</title>
     </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <body>
        <header id="header" >
         <a href="#" class="logo">Hola! World</a>
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
        </header>
        <section>
@@ -21,6 +24,13 @@
         <h2>About me</h2>
         <p>I am Keerthana Sathyakumar, a freshman at CIT, Chennai pursuing CSE.<br>I am deeply into coding and technology, and I want to explore more and evolve along with tech. And also, I feel that I have to share my knowledge with those children who deserve but are being illiterate.<br>My hobbies are coding, dancing, singing, learn new things in real life. I personally got to gain leadership skills during my school days, which is helping me a lot in college too. Looking forward to learn more and more stuffs and boost my knowledge.<br>Happy coding :)
         </p>
+       </div>
+
+       <div class="sec2">
+        <h2>Contact</h2>
+        <a href="https://www.instagram.com/keerthana_sathyakumar/" target="_blank" rel="noopener" rel="noreferrer" class="fa fa-instagram"></a>
+        <a href="https://twitter.com/KeerthanaSathy3" target="_blank" rel="noopener" rel="noreferrer" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/keerthana-sathyakumar-b59444217/" target="_blank" rel="noopener" rel="noreferrer" class="fa fa-linkedin"></a>
        </div>
 
        <script>
@@ -35,6 +45,16 @@
             btn.style.marginTop = value * 2.0 + 'px';
             header.style.top = value * 0.5 + 'px';
           })
+
+          document.querySelectorAll('a[href^="#]').forEach(anchor => {
+            anchor.addEventListener("click", function(e){
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior : "smooth"
+                });
+            });
+          });
+
        </script>
     </body>
 </html>
