@@ -1,60 +1,137 @@
 <!DOCTYPE html>
+
 <html>
-    <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <head><link rel="stylesheet" type="text/css" href="style.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <head>
-        <title>Portfolio Website | Parallax Scrolling Website</title>
-    </head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <body>
-       <header id="header" >
-        <a href="#" class="logo">Hola! World</a>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <header>
+            <a href="#" class="logo">KEERTHANA</a>
         <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a class="nav" href="#about">About</a></li>
+            <li><a class="nav" href="#resume">Resume</a></li>
+            <li><a class="nav" href="#skills">Skills</a></li>
+            <li><a class="nav" href="#projects">Projects</a></li>
+            <li><a class="nav" href="#blog">My Blog</a></li>
+            <li><a href="https://app.techiegen.com/communities" class="nav" href="#community">Community</a></li>
         </ul>
-       </header>
-       <section>
-        <h2 id="text"><span>It's me</span><br>Keerthana</h2>
-        <a href="#" id="btn">Download Resume</a>
-       </section>
-       <div class="sec">
-        <h2>About me</h2>
-        <p>I am Keerthana Sathyakumar, a freshman at CIT, Chennai pursuing CSE.<br>I am deeply into coding and technology, and I want to explore more and evolve along with tech. And also, I feel that I have to share my knowledge with those children who deserve but are being illiterate.<br>My hobbies are coding, dancing, singing, learn new things in real life. I personally got to gain leadership skills during my school days, which is helping me a lot in college too. Looking forward to learn more and more stuffs and boost my knowledge.<br>Happy coding :)
-        </p>
-       </div>
+    </header>
 
-       <div class="sec2">
-        <h2>Contact</h2>
-        <a href="https://www.instagram.com/keerthana_sathyakumar/" target="_blank" rel="noopener" rel="noreferrer" class="fa fa-instagram"></a>
-        <a href="https://twitter.com/KeerthanaSathy3" target="_blank" rel="noopener" rel="noreferrer" class="fa fa-twitter"></a>
-        <a href="https://www.linkedin.com/in/keerthana-sathyakumar-b59444217/" target="_blank" rel="noopener" rel="noreferrer" class="fa fa-linkedin"></a>
-       </div>
+    <input type="checkbox" id="hamburger-input" class="burger-shower"/>
+    <label id="hamburger-menu" for="hamburger-input">
+        <nav id="sidebar-menu">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Resume</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">My Blog</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </nav>
 
-       <script>
-          let text = document.getElementById('text')
-          let btn = document.getElementById('btn')
-          let header = document.getElementById('header')
+        <div class="overlay"></div>
+    </label>
+    <div id="home" class="wrapper">
+            <div class="static-txt">I'm a</div>
+            <ul class="dynamic-txts">
+                <li><span>Web Developer</span></li>
+                <li><span>Tech Enthusiast</span></li>
+                <li><span>Freelancer</span></li>
+                <li><span>Innovator</span></li>
+            </ul>
+    </div>
 
-          window.addEventListener('scroll', function(){
-            let value =  window.scrollY
+    <div id="about" class="me">
+         <h3>About Me</h3>
+         <p><b>Name:<br>Date of Birth:<br>Address:<br>Postal code:<br>Email:<br>Phone:</b></p>
+         <a>Keerthana S<br>31-07-2004<br>Rengappanaickerpatti,Virudhunagar<br>626126<br>keersathya3111@gmail.com<br>9629411643</a>
+         <!-- HTML !-->
+<button class="button-17" role="button">Download CV</button>
 
-            text.style.top = 35 + value * -0.25 + '%';
-            btn.style.marginTop = value * 2.0 + 'px';
-            header.style.top = value * 0.5 + 'px';
-          })
+<style>.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #daa520;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #0a0a0a;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
 
-          document.querySelectorAll('a[href^="#]').forEach(anchor => {
-            anchor.addEventListener("click", function(e){
-                e.preventDefault();
-                document.querySelector(this.getAttribute("href")).scrollIntoView({
-                    behavior : "smooth"
-                });
-            });
-          });
+.button-17:hover {
+  background: #0a0a0a;
+  color: #daa520;
+}
 
-       </script>
-    </body>
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #0a0a0a;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}</style>
+
+    </div>
+       
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+</body>
+    
 </html>
